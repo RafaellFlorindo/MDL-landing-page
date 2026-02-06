@@ -10,7 +10,7 @@ const Hero = () => (
       backgroundSize: "60px 60px"
     }} />
 
-    <div className="container relative z-10 max-w-4xl text-center">
+    <div className="container relative z-10 max-w-6xl text-center">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -25,9 +25,14 @@ const Hero = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15 }}
-        className="text-4xl sm:text-5xl md:text-7xl leading-[1.05] mb-6"
+        // AJUSTES FEITOS:
+        // 1. Reduzi o tamanho máximo (de 8xl para 7xl) para caber na tela.
+        // 2. Troquei 'leading-none' por 'leading-[1.1]' (separa as linhas).
+        // 3. Removi 'tracking-tight' (separa as letras).
+        className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-8"
       >
-        A 1ª IA DO MUNDO QUE FAZ ELA FICAR{" "}
+        A PRIMEIRA IA DO MUNDO QUE FAZ <br className="hidden md:block" />
+        ELA FICAR{" "}
         <span className="text-secondary text-glow-purple">VICIADA</span>{" "}
         NA SUA CONVERSA
       </motion.h1>
@@ -38,8 +43,12 @@ const Hero = () => (
         transition={{ duration: 0.5, delay: 0.3 }}
         className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed"
       >
-        Pare de ser o "amiguinho" que leva vácuo. Copie e cole as respostas do
-        Mestre da Lábia e veja ela implorando para te ver hoje à noite.
+        🔥 Experimente agora e saiba o que dizer na conversa pra fazer ela{" "}
+        {/* Adicionado span para o efeito grifado */}
+        <span className="underline decoration-secondary underline-offset-4 font-semibold text-foreground">
+          correr atrás de você
+        </span>{" "}
+        hoje mesmo.
       </motion.p>
 
       <motion.div
