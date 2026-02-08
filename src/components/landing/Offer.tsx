@@ -15,7 +15,9 @@ const Offer = () => (
   <section className="py-20 px-4" id="oferta">
     <ScrollReveal>
       <div className="container max-w-xl mx-auto">
-        <div className="rounded-2xl border-2 border-secondary/40 glow-purple p-8 md:p-10 text-center space-y-6">
+        {/* Adicionei 'relative' aqui para garantir o contexto de empilhamento */}
+        <div className="relative rounded-2xl border-2 border-secondary/40 glow-purple p-8 md:p-10 text-center space-y-6 overflow-visible">
+          
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20">
             <Zap className="w-4 h-4 text-secondary" />
             <span className="text-xs font-body font-semibold text-secondary uppercase tracking-wider">Oferta Especial</span>
@@ -24,7 +26,15 @@ const Offer = () => (
           <h2 className="text-3xl md:text-4xl">ACESSO COMPLETO</h2>
 
           <div className="space-y-1">
-            <p className="text-muted-foreground font-body line-through text-lg">R$ 97,00</p>
+            <div className="flex items-center justify-center gap-2">
+                <span className="text-muted-foreground font-body line-through text-lg">
+                  R$ 97,00
+                </span>
+                <span className="bg-red-500/15 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-md">
+                  -80% OFF
+                </span>
+            </div>
+            
             <p className="text-5xl md:text-6xl font-display text-primary text-glow-green">
               R$ 19,90
             </p>
@@ -40,7 +50,12 @@ const Offer = () => (
             ))}
           </ul>
 
-          <CTAButton />
+          {/* --- CORREÇÃO AQUI --- */}
+          {/* O div abaixo garante que o botão fique ACIMA de qualquer efeito de glow ou borda */}
+          <div className="relative z-20 pointer-events-auto">
+             <CTAButton />
+          </div>
+          {/* --------------------- */}
 
           <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground font-body">
             <ShieldCheck className="w-4 h-4" />

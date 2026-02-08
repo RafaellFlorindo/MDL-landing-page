@@ -25,10 +25,6 @@ const Hero = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.15 }}
-        // AJUSTES FEITOS:
-        // 1. Reduzi o tamanho máximo (de 8xl para 7xl) para caber na tela.
-        // 2. Troquei 'leading-none' por 'leading-[1.1]' (separa as linhas).
-        // 3. Removi 'tracking-tight' (separa as letras).
         className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-8"
       >
         A PRIMEIRA IA DO MUNDO QUE FAZ <br className="hidden md:block" />
@@ -44,7 +40,6 @@ const Hero = () => (
         className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed"
       >
         🔥 Experimente agora e saiba o que dizer na conversa pra fazer ela{" "}
-        {/* Adicionado span para o efeito grifado */}
         <span className="underline decoration-secondary underline-offset-4 font-semibold text-foreground">
           correr atrás de você
         </span>{" "}
@@ -56,7 +51,9 @@ const Hero = () => (
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4, delay: 0.45 }}
       >
-        <CTAButton />
+        {/* === MUDANÇA AQUI === */}
+        {/* Adicionei mode="scroll" para que este botão role a página em vez de ir para o checkout */}
+        <CTAButton mode="scroll" />
       </motion.div>
     </div>
   </section>
