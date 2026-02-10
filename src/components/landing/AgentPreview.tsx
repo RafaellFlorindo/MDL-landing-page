@@ -5,9 +5,14 @@ import ScrollReveal from "./ScrollReveal";
 
 // Respostas simuladas para cada tom
 const RESPONSES = {
-  segura: "boa, rotina de academia é outra vida 😄 qual treino foi o de hoje?",
-  ousada: "se eu te desafiar pra um treino ‘sem reclamar’ tu aceita ou tu é das que dá migué?",
-  engracada: "ia mandar um oi normal, mas lembrei que sou tímido kkkkkk, finge que eu mandei uma cantada de pedreiro muito boa aqui 👇"
+  // O Segura não é ser "amiguinho", é mostrar observação sem babar ovo.
+  segura: "Deve tá pagando os pecados do fim de semana, mas respeitei o foco",
+
+  // Ousada tem que ter "push-pull". Tu elogia e tira logo em seguida. Isso buga a mente.
+  ousada: "Tô na dúvida se foi treino de verdade ou só pra biscoitar no story kkkk 👀",
+
+  // Engraçada não é ser palhaço de circo, é ter "cocky comedy" (arrogância engraçada).
+  engracada: "Ia te chamar pra comer, mas vendo esse story minha consciência pesou kkkk"
 };
 
 const AgentPreview = () => {
