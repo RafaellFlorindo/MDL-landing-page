@@ -31,7 +31,7 @@ const Offer = () => (
                   R$ 97,00
                 </span>
                 <span className="bg-red-500/15 text-red-400 text-xs font-semibold px-2 py-0.5 rounded-md">
-                  -80% OFF
+                  -75% OFF
                 </span>
             </div>
             
