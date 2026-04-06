@@ -36,7 +36,7 @@ const Offer = () => (
             </div>
             
             <p className="text-5xl md:text-6xl font-display text-primary text-glow-green">
-              R$ 19,90
+              R$ 24,90
             </p>
             <p className="text-sm text-muted-foreground font-body">Pagamento único · Acesso vitalício</p>
           </div>
