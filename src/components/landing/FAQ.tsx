@@ -14,7 +14,7 @@ const faqs = [
   },
   {
     q: "É uma assinatura mensal?",
-    a: "Não! É um pagamento único de R$ 19,90 com acesso vitalício. Sem cobranças recorrentes, sem surpresas.",
+    a: "Não! É um pagamento único de R$ 24,90 com acesso vitalício. Sem cobranças recorrentes, sem surpresas.",
   },
   {
     q: "O acesso é imediato?",
